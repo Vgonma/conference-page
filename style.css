@@ -91,3 +91,65 @@ italic */
   font-weight: 300;
   font-size: 1.1em;
 }
+
+.section-title {
+  text-align: center;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.main-program {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--grey);
+  color: white;
+  padding: 1em;
+}
+
+.main-program hr {
+  border: 1px solid var(--orange);
+  width: 50px;
+  margin-bottom: 20px;
+}
+
+.main-program ul {
+  list-style: none;
+  gap: 15px 0;
+}
+
+.program-activity {
+  display: flex;
+  align-items: center;
+  gap: 0 1em;
+  margin: 10px 0;
+  padding: 1.5em;
+  background-color: #d3d3d320;
+}
+
+.main-program ul h4 {
+  color: var(--orange);
+  flex: 1;
+}
+
+.main-program ul img {
+  width: 40px;
+  height: 40px;
+}
+
+.main-program ul p {
+  flex: 2.5;
+}
+
+.main-program button {
+  border: none;
+  appearance: none;
+  outline: none;
+  background-color: #ff4f38;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  width: 80%;
+  height: 5rem;
+  margin: 2.3em 4em;
+}
