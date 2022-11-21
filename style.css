@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Lato Regular, sans-serif;
+}
+
+/* lato font stiles
+regular
+bold
+bold italic
+italic */
+
+:root {
+  --grey: #272a31;
+  --orange: #ec5242;
+  --light-grey: #d3d3d3;
+}
+
+.main-title-section {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f8f8;
+  background-image: url(./images/bg-header.jpg);
+  background-size: contain;
+}
+
+.navbar {
+  background: none;
+  padding: 1em 30px;
+}
+
+.hamburger {
+  display: block;
+  height: 35px;
+  width: 40px;
+  cursor: pointer;
+  background: none;
+  outline: none;
+  border: none;
+  appearance: none;
+}
+
+.bar,
+.hamburger::after,
+.hamburger::before {
+  content: '';
+  display: block;
+  background-color: #5d5d5d;
+  height: 7px;
+  width: 100%;
+  margin: 6px 0;
+}
+
+.head-title-container {
+  /* border: solid red; */
+  padding: 0.8em;
+}
+
+.head-title-container > * {
+  margin: 10px 0;
+}
+
+.head-title-small {
+  color: #ec5242;
+  font-size: 1.3em;
+  font-weight: 300;
+}
+
+.head-title-big {
+  color: var(--orange);
+  font-weight: 800;
+  line-height: 32px;
+}
+
+.head-description {
+  border: solid white;
+  background-color: #f7f7f7;
+  padding: 0.6em;
+  font-size: 14px;
+  line-height: 23px;
+}
+
+.head-date {
+  color: #5d5d5d;
+  font-weight: 900;
+  font-size: 1.4em;
+}
+
+.head-place {
+  font-weight: 300;
+  font-size: 1.1em;
+}
