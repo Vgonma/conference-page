@@ -25,6 +25,8 @@ italic */
   background-size: contain;
 }
 
+/* ------------------------------ nav section ------------------------------ */
+
 .navbar {
   background: none;
   padding: 1em 30px;
@@ -51,6 +53,8 @@ italic */
   width: 100%;
   margin: 6px 0;
 }
+
+/* ------------------------------ title section ------------------------------ */
 
 .head-title-container {
   /* border: solid red; */
@@ -98,6 +102,8 @@ italic */
   margin: 10px 0;
 }
 
+/* ------------------------------ program section ------------------------------ */
+
 .main-program {
   display: flex;
   flex-direction: column;
@@ -107,7 +113,7 @@ italic */
   padding: 1em;
 }
 
-.main-program hr {
+.section-divider {
   border: 1px solid var(--orange);
   width: 50px;
   margin-bottom: 20px;
@@ -152,4 +158,93 @@ italic */
   width: 80%;
   height: 5rem;
   margin: 2.3em 4em;
+}
+
+/* ------------------------------ Champion section ------------------------------ */
+
+.featured-champions {
+  border: solid magenta;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.champ-grid {
+  margin: 2em 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 3rem 0;
+}
+
+.champ-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.champ-left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+
+.checkers {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 90%;
+  z-index: -1;
+}
+
+.avatar-img {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  max-width: 95%;
+}
+
+.champ-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 65%;
+}
+
+.champ-name {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.champ-job {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--orange);
+}
+
+.champ-divider {
+  width: 10%;
+  border-color: var(--light-grey);
+}
+
+.champ-description {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.champions-more {
+  width: 100%;
+  border: solid 2px var(--light-grey);
+  border-radius: 3px;
+  text-align: center;
+  margin: 1em 0;
+  padding: 1em;
+  font-size: 18px;
+  font-weight: normal;
 }
