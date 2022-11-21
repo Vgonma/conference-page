@@ -1,27 +1,4 @@
 <a name="readme-top"></a>
-
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-After you're finished please remove all the comments and instructions!
--->
-
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -50,13 +27,13 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 [Conference page] <a name="about-project"></a>
 
-> This is a basic mockup for a conference web page.
+This is a basic mockup for a conference web page.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Built with html, css and JavaScript..
+Built with html, css and JavaScript..
 
 <details>
   <summary>Webpage layout</summary>
@@ -138,19 +115,11 @@ To run the project open the html file using a web browser.
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
+👤 **Victor Gonzalez**
 
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/Vgonma)
+- Twitter: [@twitterhandle](https://twitter.com/Victor_GonMa)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/victor-manuel-gonzalez-massimi-a77265124/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -192,8 +161,6 @@ I would like to thank [Cindy Shin](https://www.behance.net/adagio07) for the bas
 <!-- FAQ (optional) -->
 
 ## ❓ FAQ <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
 
 - **[Can I use this for my own?]**
 
