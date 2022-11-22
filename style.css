@@ -207,6 +207,7 @@ italic */
   top: 1em;
   left: 1em;
   max-width: 95%;
+  height: calc(width);
 }
 
 .champ-right {
@@ -443,5 +444,4 @@ italic */
 
 .reserved-rights {
   font-size: 13px;
-
 }
