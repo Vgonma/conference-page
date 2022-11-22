@@ -17,6 +17,63 @@ italic */
   --light-grey: #d3d3d3;
 }
 
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.stop-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ============================== Nav Menu ============================== */
+.is-active {
+  left: 0;
+}
+
+.nav-menu-mobile {
+  position: fixed;
+  top: 0;
+  left: -65%;
+  height: 100vh;
+  width: 65vw;
+  background-color: #d3d3d3ef;
+  backdrop-filter: blur(3px);
+  z-index: 20;
+}
+
+.nav-menu-ul {
+  margin-top: 3.7rem;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.nav-menu-li {
+  display: flex;
+  width: 100%;
+  background-color: #3e3e3e;
+}
+
+.nav-menu-li > a {
+  width: 100%;
+  padding: 1rem;
+}
+
+.nav-menu-li > a:hover {
+  background-color: var(--orange);
+}
+
+.nav-menu-li > a:link,
+.nav-menu-li > a:visited {
+  text-decoration: none;
+  color: white;
+}
+
 /* ============================== Main page ============================== */
 
 .main-title-section {
@@ -34,6 +91,7 @@ italic */
 .navbar-mobile {
   background: none;
   padding: 1em 30px;
+  z-index: 21;
 }
 
 .navbar-desktop {
@@ -49,6 +107,7 @@ italic */
   outline: none;
   border: none;
   appearance: none;
+  transition: 0.5ms;
 }
 
 .bar,
@@ -60,6 +119,22 @@ italic */
   height: 7px;
   width: 100%;
   margin: 6px 0;
+}
+
+.hamburger.is-active .bar {
+  visibility: hidden;
+}
+
+.hamburger.is-active::before {
+  transform:
+    rotate(45deg)
+    translate(10px, 7px);
+}
+
+.hamburger.is-active::after {
+  transform:
+    rotate(-45deg)
+    translate(11px, -9px);
 }
 
 /* ------------------------------ title section ------------------------------ */
@@ -540,7 +615,7 @@ italic */
     justify-content: space-between;
     height: 3em;
     width: 100%;
-    padding: 0 6em;
+    padding: 0 10%;
   }
 
   .nav-li-desktop {
@@ -552,16 +627,24 @@ italic */
     font-size: 12px;
   }
 
+  .nav-li-desktop > a {
+    width: 100%;
+  }
+
   .nav-li-desktop a:link,
   .nav-li-desktop a:visited {
     text-decoration: none;
     color: #3e3e3e;
-    width: 100%;
     text-align: center;
   }
 
   .nav-li-desktop:first-child {
     flex: 4;
+    justify-content: flex-start;
+  }
+
+  .nav-li-desktop:first-child > a {
+    width: fit-content;
   }
 
   .nav-li-desktop:nth-child(7) {
