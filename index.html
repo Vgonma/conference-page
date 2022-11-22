@@ -9,12 +9,38 @@
   <title>From gamer to gamer</title>
 </head>
 <body>
+  <!-- -------------------------------------------- Nav bars -------------------------------------------- -->
+
   <header class="main-title-section">
-    <div class="navbar">
+    <div class="navbar-mobile">
       <button class="hamburger">
         <div class="bar"></div>
       </button>
     </div>
+    <div class="navbar-desktop">
+      <div class="login-bar">
+        <ul>
+          <li class="login-li"><button><img class="login-media-img" src="./images/icon-facebook.png" alt="facebook icon"></li></button>
+          <li class="login-li"><button><img class="login-media-img" src="./images/icon-twitter.png" alt="twitter icon"></li></button>
+          <li class="login-li"><button>English</button><li>
+          <li class="login-li"><button>My Page</button><li>
+          <li class="login-li"><button>Logout</button><li>
+        </ul>
+      </div>
+      <ul class="nav-ul-desktop">
+        <li class="nav-li-desktop"><a class="nav-img-desktop-container" href="./index.html"><img class="nav-img-desktop" src="./images/summit-logo.jpg" alt="Game development summit logo"></a></li>
+        <li class="nav-li-desktop"><a href="./about.html">About</a></li>
+        <li class="nav-li-desktop"><a href="#">Program</a></li>
+        <li class="nav-li-desktop"><a href="#">Join</a></li>
+        <li class="nav-li-desktop"><a href="#">Sponsor</a></li>
+        <li class="nav-li-desktop"><a href="#">News</a></li>
+        <li class="nav-li-desktop"><button class="nav-button-desktop">
+          GD campaign
+        </button></li>
+      </ul>
+    </div>
+<!-- -------------------------------------------- Head Title -------------------------------------------- -->
+
     <div class="head-title-container">
       <h3 class="head-title-small">"Hello! Gaming world"</h3>
       <h1 class="head-title-big">GAMES DEVELOPMENT GLOBAL SUMMIT 2023</h1>
@@ -24,6 +50,7 @@
     </div>
   </header>
 
+<!-- -------------------------------------------- Main Program -------------------------------------------- -->
   <section class="main-program">
     <h2 class="section-title">Main Program</h2>
     <hr class="section-divider">
@@ -55,7 +82,9 @@
       </li>
     </ul>
     <button class="program-join-btn">Join Party</button>
+    <a class="program-full-link" href="#">SEE THE WHOLE PROGRAM</a>
   </section>
+  <!-- -------------------------------------------- Campion Section -------------------------------------------- -->
 
   <section class="featured-champions">
     <!-- insert champions using js -->
@@ -63,12 +92,12 @@
     <h2 class="section-title">Featured Champions</h2>
     <hr class="section-divider ">
     <div class="champ-grid">
+
       <div class="champ-card">
         <div class="champ-left">
           <img class="checkers" src="./images/bg-checker.jpg" alt="">
           <img class="avatar-img" src="./images/champ-1.jpg" alt="">
         </div>
-
         <div class="champ-right">
           <h2 class="champ-name">Yochai Benkler</h2>
           <h4 class="champ-job">Berkman Professor of Entrepreneurial Legal Studies at Harvard Law School</h4>
@@ -76,12 +105,12 @@
           <p class="champ-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde magnam temporibus dolorum impedit aliquid, voluptatem saepe nam minus enim possimus. Hic quas, ducimus eum beatae illo iste non magnam quam.</p>
         </div>
       </div>
+
       <div class="champ-card">
         <div class="champ-left">
           <img class="checkers" src="./images/bg-checker.jpg" alt="">
           <img class="avatar-img" src="./images/champ-1.jpg" alt="">
         </div>
-
         <div class="champ-right">
           <h2 class="champ-name">Yochai Benkler</h2>
           <h4 class="champ-job">Berkman Professor of Entrepreneurial Legal Studies at Harvard Law School</h4>
@@ -94,5 +123,26 @@
       MORE
     </div>
   </section>
+  <!-- -------------------------------------------- Partner Section -------------------------------------------- -->
+
+  <section class="partners-section main-partners-section">
+    <h2 class="about-logo-title">Partners</h2>
+    <hr class="section-divider about-section-divider">
+    <ul class="partner-list">
+      </a><li class="partner-item"><img class="partner-img" src="./images/mozilla-logo.png" alt="mozilla"></li>
+      </a><li class="partner-item"><img class="partner-img" src="./images/google-logo.png" alt="google"></li>
+      </a><li class="partner-item"><img class="partner-img" src="./images/netflix-logo.png" alt="netflix"></li>
+      </a><li class="partner-item"><img class="partner-img" src="./images/twitch-logo.png" alt="twitch"></li>
+      </a><li class="partner-item"><img class="partner-img" src="./images/airbnb-logo.png" alt="airbnb"></li>
+    </ul>
+  </section>
+  <!-- -------------------------------------------- Rights reserved -------------------------------------------- -->
+
+  <footer class="footer-section main-footer-section">
+    <div class="footer-img-container">
+      <img class="img" src="./images/ESALogo_White.png" alt="">
+    </div>
+    <p class="reserved-rights">The GD Global Summit logo and variations are trademarks and/or registered trademarks of the Entertainment Software Association.</p>
+  </footer>
 </body>
 </html>

@@ -25,13 +25,19 @@ italic */
   background-color: #f8f8f8;
   background-image: url(./images/bg-header.jpg);
   background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 
 /* ------------------------------ nav section ------------------------------ */
 
-.navbar {
+.navbar-mobile {
   background: none;
   padding: 1em 30px;
+}
+
+.navbar-desktop {
+  display: none;
 }
 
 .hamburger {
@@ -109,6 +115,8 @@ italic */
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url(./images/black-texture.jpg);
+  background-size: contain;
   background-color: var(--grey);
   color: white;
   padding: 1em;
@@ -148,7 +156,7 @@ italic */
   flex: 2.5;
 }
 
-.main-program button {
+.program-join-btn {
   border: none;
   appearance: none;
   outline: none;
@@ -159,6 +167,10 @@ italic */
   width: 80%;
   height: 5rem;
   margin: 2.3em 4em;
+}
+
+.program-full-link {
+  display: none;
 }
 
 /* ------------------------------ Champion section ------------------------------ */
@@ -181,7 +193,6 @@ italic */
 
 .champ-card {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -189,8 +200,9 @@ italic */
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 30%;
+  flex: 1;
+  height: 100%;
+  margin-right: 5%;
 }
 
 .checkers {
@@ -212,7 +224,7 @@ italic */
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  width: 65%;
+  flex: 4;
 }
 
 .champ-name {
@@ -254,6 +266,10 @@ italic */
 /* ------------------------------ About main section ------------------------------ */
 .about-title-section {
   background-color: #f7f7f7;
+  background-image: url(./images/bg-header-alt1.jpg);
+  background-size: contain;
+  background-repeat: repeat-x;
+  background-position: top;
 }
 
 .about-title-container {
@@ -299,9 +315,12 @@ italic */
 /* ------------------------------ Logo section ------------------------------ */
 
 .about-logo-section {
+  border: solid #f7f7f7;
   background-color: white;
   padding: 1.5em;
-  border: solid #f7f7f7;
+}
+
+.about-logo-main-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -320,6 +339,9 @@ italic */
   width: 100%;
   padding: 0.8em;
   border: solid 1px #f7f7f7;
+  display: flex;
+  align-items: center;
+  max-width: 420px;
 }
 
 .summit-logo {
@@ -343,16 +365,17 @@ italic */
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1em;
   position: relative;
   margin: 2em 0;
   width: 100%;
+  max-width: 420px;
 }
 
 .single-year-container {
   position: relative;
   width: 90%;
   max-width: 600px;
-  background-size: cover;
 }
 
 .single-year-container > * {
@@ -364,6 +387,8 @@ italic */
   top: 0;
   left: 0;
   max-width: 100%;
+  height: 100%;
+  object-fit: cover;
   z-index: 0;
 }
 
@@ -393,7 +418,7 @@ italic */
 
 /* ------------------------------ Partners section ------------------------------ */
 
-.about-partners-section {
+.partners-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -422,7 +447,7 @@ italic */
 
 /* ------------------------------ footer section ------------------------------ */
 
-.about-footer-section {
+.footer-section {
   padding: 0.8em;
   display: flex;
   align-items: center;
@@ -442,4 +467,303 @@ italic */
 
 .reserved-rights {
   font-size: 13px;
+}
+
+/* ============================== Desktop version > 768 ============================== */
+
+@media only screen and (min-width: 768px) {
+  /* ------------------------------ Nav Bars ------------------------------ */
+
+  .navbar-mobile {
+    display: none;
+  }
+
+  .login-bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 1.3em;
+    background-color: #3e3e3e;
+    color: white;
+    padding: 0 6em;
+  }
+
+  .login-bar ul {
+    display: flex;
+    list-style: none;
+    font-size: 10px;
+    color: white;
+    gap: 0 1em;
+  }
+
+  .login-li {
+    display: flex;
+    align-items: center;
+    height: 20px;
+  }
+
+  .login-li button {
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    height: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .login-li:nth-child(1) > button,
+  .login-li:nth-child(2) > button {
+    background-color: white;
+    border-radius: 50%;
+  }
+
+  .login-media-img {
+    object-fit: contain;
+    height: 17px;
+  }
+
+  .navbar-desktop {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .nav-ul-desktop {
+    background-color: white;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    height: 3em;
+    width: 100%;
+    padding: 0 6em;
+  }
+
+  .nav-li-desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex: 1;
+    font-size: 12px;
+  }
+
+  .nav-li-desktop a:link,
+  .nav-li-desktop a:visited {
+    text-decoration: none;
+    color: #3e3e3e;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-li-desktop:first-child {
+    flex: 4;
+  }
+
+  .nav-li-desktop:nth-child(7) {
+    justify-content: flex-end;
+    flex: 2;
+  }
+
+  .nav-li-desktop:nth-child(2) a {
+    color: var(--orange);
+  }
+
+  .nav-img-desktop {
+    max-height: 42px;
+    flex: 2;
+    object-fit: contain;
+  }
+
+  .nav-button-desktop {
+    background: none;
+    border: solid 3px var(--orange);
+    padding: 0.6em;
+    color: var(--orange);
+  }
+
+  /* ------------------------------ Title section desktop------------------------------ */
+
+  .head-title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 620px;
+    height: 47vh;
+    margin: 10% auto;
+  }
+
+  .head-title-small {
+    font-size: 34px;
+  }
+
+  .head-title-big {
+    font-size: 46px;
+    line-height: 53px;
+  }
+
+  /* ------------------------------ program section desktop------------------------------ */
+
+  .main-program ul {
+    display: flex;
+    gap: 0 5px;
+    margin: 0 20%;
+  }
+
+  .program-activity {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .program-activity > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .program-activity > p {
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .program-join-btn {
+    display: none;
+  }
+
+  .program-full-link {
+    display: flex;
+    width: 80%;
+    height: 5rem;
+    margin: 2.3em 4em;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    line-height: 50px;
+  }
+
+  .program-full-link:link,
+  .program-full-link:visited {
+    color: white;
+  }
+
+  /* ------------------------------ champions section desktop------------------------------ */
+
+  .champ-grid {
+    grid-template-columns: 50% 50%;
+    justify-content: space-between;
+  }
+
+  .featured-champions {
+    margin: 0 5%;
+  }
+
+  .champ-card {
+    margin: 3% 0;
+  }
+
+  .champ-left {
+    display: block;
+    height: 100%;
+  }
+
+  .champ-right {
+    margin-left: 5%;
+  }
+
+  .checkers {
+    max-width: 80px;
+  }
+
+  .avatar-img {
+    width: 100%;
+    max-width: 160px;
+    left: 1em;
+  }
+
+  .champions-more {
+    display: none;
+  }
+
+  /* ------------------------------ partners and rights section desktop ------------------------------ */
+
+  .about-partners-section > h2 {
+    font-size: 18px;
+    font-weight: 200;
+    color: #919191;
+    margin-top: 1em;
+  }
+
+  .footer-section {
+    gap: 0 1em;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .reserved-rights {
+    text-align: center;
+  }
+
+  /* ============================== About page ============================== */
+
+  /* ------------------------------ Head Title section desktop ------------------------------ */
+
+  .about-title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 620px;
+    height: 47vh;
+    margin: 10% auto;
+  }
+
+  .about-logo-main-container {
+    margin: 5% 0;
+  }
+
+  .about-title-small {
+    display: none;
+  }
+
+  .question-contact {
+    margin-top: 3em;
+  }
+
+  /* ------------------------------ About past summits section desktop ------------------------------ */
+
+  .about-past-summits-section {
+    margin: 5% 0;
+  }
+
+  .past-summit-title-line-break {
+    display: none;
+  }
+
+  .past-years-container {
+    flex-direction: row;
+    align-items: stretch;
+    max-width: 550px;
+  }
+
+  .single-year-container::after {
+    height: 100%;
+  }
+
+  .about-partners-section {
+    display: none;
+  }
+
+  .about-footer-section {
+    background-color: #2e2e2e;
+    color: white;
+    font-size: 8px;
+    font-weight: 100;
+    padding: 5em 0;
+  }
 }
