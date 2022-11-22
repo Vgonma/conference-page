@@ -154,7 +154,7 @@ italic */
   flex: 2.5;
 }
 
-.main-program button {
+.program-join-btn {
   border: none;
   appearance: none;
   outline: none;
@@ -165,6 +165,10 @@ italic */
   width: 80%;
   height: 5rem;
   margin: 2.3em 4em;
+}
+
+.program-full-link {
+  display: none;
 }
 
 /* ------------------------------ Champion section ------------------------------ */
@@ -187,7 +191,6 @@ italic */
 
 .champ-card {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -195,8 +198,9 @@ italic */
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 30%;
+  flex: 1;
+  height: 100%;
+  margin-right: 5%;
 }
 
 .checkers {
@@ -218,7 +222,7 @@ italic */
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  width: 65%;
+  flex: 4;
 }
 
 .champ-name {
@@ -457,6 +461,8 @@ italic */
 /* ============================== Desktop version > 768 ============================== */
 
 @media only screen and (min-width: 768px) {
+  /* ------------------------------ Nav Bars ------------------------------ */
+
   .navbar-mobile {
     display: none;
   }
@@ -569,5 +575,131 @@ italic */
     border: solid 3px var(--orange);
     padding: 0.6em;
     color: var(--orange);
+  }
+
+  /* ------------------------------ Title section desktop------------------------------ */
+
+  .head-title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 620px;
+    height: 90vh;
+    margin: 0 auto;
+    margin-left: 20%;
+    margin-top: 10%;
+  }
+
+  .head-title-small {
+    font-size: 34px;
+  }
+
+  .head-title-big {
+    font-size: 46px;
+    line-height: 53px;
+  }
+
+  /* ------------------------------ program section desktop------------------------------ */
+
+  .main-program ul {
+    display: flex;
+    gap: 0 5px;
+    margin: 0 20%;
+  }
+
+  .program-activity {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .program-activity > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .program-activity > p {
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .program-join-btn {
+    display: none;
+  }
+
+  .program-full-link {
+    display: flex;
+    width: 80%;
+    height: 5rem;
+    margin: 2.3em 4em;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    line-height: 50px;
+  }
+
+  .program-full-link:link,
+  .program-full-link:visited {
+    color: white;
+  }
+
+  /* ------------------------------ champions section desktop------------------------------ */
+
+  .champ-grid {
+    grid-template-columns: 50% 50%;
+    justify-content: space-between;
+  }
+
+  .featured-champions {
+    margin: 0 5%;
+  }
+
+  .champ-card {
+    margin: 3% 0;
+  }
+
+  .champ-left {
+    display: block;
+    height: 100%;
+  }
+
+  .champ-right {
+    margin-left: 5%;
+  }
+
+  .checkers {
+    max-width: 80px;
+  }
+
+  .avatar-img {
+    width: 100%;
+    max-width: 160px;
+    left: 1em;
+  }
+
+  .champions-more {
+    display: none;
+  }
+
+  .about-partners-section > h2 {
+    font-size: 18px;
+    font-weight: 200;
+    color: #919191;
+    margin-top: 1em;
+  }
+
+  /* ------------------------------ rights section desktop ------------------------------ */
+
+  .about-footer-section {
+    gap: 0 1em;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .reserved-rights {
+    text-align: center;
   }
 }
