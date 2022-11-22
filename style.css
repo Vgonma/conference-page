@@ -25,6 +25,8 @@ italic */
   background-color: #f8f8f8;
   background-image: url(./images/bg-header.jpg);
   background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
 }
 
 /* ------------------------------ nav section ------------------------------ */
@@ -313,9 +315,12 @@ italic */
 /* ------------------------------ Logo section ------------------------------ */
 
 .about-logo-section {
+  border: solid #f7f7f7;
   background-color: white;
   padding: 1.5em;
-  border: solid #f7f7f7;
+}
+
+.about-logo-main-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -334,6 +339,9 @@ italic */
   width: 100%;
   padding: 0.8em;
   border: solid 1px #f7f7f7;
+  display: flex;
+  align-items: center;
+  max-width: 420px;
 }
 
 .summit-logo {
@@ -357,16 +365,17 @@ italic */
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1em;
   position: relative;
   margin: 2em 0;
   width: 100%;
+  max-width: 420px;
 }
 
 .single-year-container {
   position: relative;
   width: 90%;
   max-width: 600px;
-  background-size: cover;
 }
 
 .single-year-container > * {
@@ -378,6 +387,8 @@ italic */
   top: 0;
   left: 0;
   max-width: 100%;
+  height: 100%;
+  object-fit: cover;
   z-index: 0;
 }
 
@@ -407,7 +418,7 @@ italic */
 
 /* ------------------------------ Partners section ------------------------------ */
 
-.about-partners-section {
+.partners-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -436,7 +447,7 @@ italic */
 
 /* ------------------------------ footer section ------------------------------ */
 
-.about-footer-section {
+.footer-section {
   padding: 0.8em;
   display: flex;
   align-items: center;
@@ -541,15 +552,12 @@ italic */
     font-size: 12px;
   }
 
-  .nav-img-desktop-container {
-    border: solid blue;
-    height: 20px;
-  }
-
   .nav-li-desktop a:link,
   .nav-li-desktop a:visited {
     text-decoration: none;
     color: #3e3e3e;
+    width: 100%;
+    text-align: center;
   }
 
   .nav-li-desktop:first-child {
@@ -558,6 +566,7 @@ italic */
 
   .nav-li-desktop:nth-child(7) {
     justify-content: flex-end;
+    flex: 2;
   }
 
   .nav-li-desktop:nth-child(2) a {
@@ -584,10 +593,8 @@ italic */
     flex-direction: column;
     justify-content: flex-start;
     max-width: 620px;
-    height: 90vh;
-    margin: 0 auto;
-    margin-left: 20%;
-    margin-top: 10%;
+    height: 47vh;
+    margin: 10% auto;
   }
 
   .head-title-small {
@@ -684,6 +691,8 @@ italic */
     display: none;
   }
 
+  /* ------------------------------ partners and rights section desktop ------------------------------ */
+
   .about-partners-section > h2 {
     font-size: 18px;
     font-weight: 200;
@@ -691,9 +700,7 @@ italic */
     margin-top: 1em;
   }
 
-  /* ------------------------------ rights section desktop ------------------------------ */
-
-  .about-footer-section {
+  .footer-section {
     gap: 0 1em;
     max-width: 600px;
     margin: auto;
@@ -701,5 +708,62 @@ italic */
 
   .reserved-rights {
     text-align: center;
+  }
+
+  /* ============================== About page ============================== */
+
+  /* ------------------------------ Head Title section desktop ------------------------------ */
+
+  .about-title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 620px;
+    height: 47vh;
+    margin: 10% auto;
+  }
+
+  .about-logo-main-container {
+    margin: 5% 0;
+  }
+
+  .about-title-small {
+    display: none;
+  }
+
+  .question-contact {
+    margin-top: 3em;
+  }
+
+  /* ------------------------------ About past summits section desktop ------------------------------ */
+
+  .about-past-summits-section {
+    margin: 5% 0;
+  }
+
+  .past-summit-title-line-break {
+    display: none;
+  }
+
+  .past-years-container {
+    flex-direction: row;
+    align-items: stretch;
+    max-width: 550px;
+  }
+
+  .single-year-container::after {
+    height: 100%;
+  }
+
+  .about-partners-section {
+    display: none;
+  }
+
+  .about-footer-section {
+    background-color: #2e2e2e;
+    color: white;
+    font-size: 8px;
+    font-weight: 100;
+    padding: 5em 0;
   }
 }
