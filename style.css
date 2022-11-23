@@ -17,6 +17,64 @@ italic */
   --light-grey: #d3d3d3;
 }
 
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.stop-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ============================== Nav Menu ============================== */
+.nav-menu-mobile.is-active {
+  transform: translate(100%, 0);
+}
+
+.nav-menu-mobile {
+  position: fixed;
+  top: 0;
+  left: -65%;
+  height: 100vh;
+  width: 65vw;
+  background-color: #d3d3d3ba;
+  backdrop-filter: blur(3px);
+  z-index: 20;
+  transition: 0.5s;
+}
+
+.nav-menu-ul {
+  margin-top: 3.7rem;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.nav-menu-li {
+  display: flex;
+  width: 100%;
+  background-color: #3e3e3e;
+}
+
+.nav-menu-li > a {
+  width: 100%;
+  padding: 1rem;
+}
+
+.nav-menu-li > a:hover {
+  background-color: var(--orange);
+}
+
+.nav-menu-li > a:link,
+.nav-menu-li > a:visited {
+  text-decoration: none;
+  color: white;
+}
+
 /* ============================== Main page ============================== */
 
 .main-title-section {
@@ -34,6 +92,7 @@ italic */
 .navbar-mobile {
   background: none;
   padding: 1em 30px;
+  z-index: 21;
 }
 
 .navbar-desktop {
@@ -42,8 +101,8 @@ italic */
 
 .hamburger {
   display: block;
-  height: 35px;
-  width: 40px;
+  height: 20px;
+  width: 25px;
   cursor: pointer;
   background: none;
   outline: none;
@@ -57,9 +116,30 @@ italic */
   content: '';
   display: block;
   background-color: #5d5d5d;
-  height: 7px;
+  height: 5px;
   width: 100%;
-  margin: 6px 0;
+  margin: 4px 0;
+  transition: 0.2s;
+}
+
+.bar {
+  transition: 0s;
+}
+
+.hamburger.is-active .bar {
+  visibility: hidden;
+}
+
+.hamburger.is-active::before {
+  transform:
+    rotate(45deg)
+    translate(-5px, 10px);
+}
+
+.hamburger.is-active::after {
+  transform:
+    rotate(-45deg)
+    translate(3px, -18px);
 }
 
 /* ------------------------------ title section ------------------------------ */
@@ -169,6 +249,10 @@ italic */
   margin: 2.3em 4em;
 }
 
+.program-join-btn:active {
+  background-color: #ba2e1c;
+}
+
 .program-full-link {
   display: none;
 }
@@ -261,14 +345,26 @@ italic */
   font-weight: normal;
 }
 
+.up-arrow {
+  object-fit: contain;
+  width: 15px;
+  margin: 0 10px;
+  transform: rotate(180deg);
+}
+
+.champions-more.is-active .up-arrow {
+  transform: rotate(0deg);
+}
+
 /* ============================== About page ============================== */
 
 /* ------------------------------ About main section ------------------------------ */
 .about-title-section {
+  display: flex;
+  flex-direction: column;
   background-color: #f7f7f7;
   background-image: url(./images/bg-header-alt1.jpg);
   background-size: contain;
-  background-repeat: repeat-x;
   background-position: top;
 }
 
@@ -540,7 +636,8 @@ italic */
     justify-content: space-between;
     height: 3em;
     width: 100%;
-    padding: 0 6em;
+    padding: 0 10%;
+    box-shadow: 0 2px 5px #2e2e2e;
   }
 
   .nav-li-desktop {
@@ -552,16 +649,24 @@ italic */
     font-size: 12px;
   }
 
+  .nav-li-desktop > a {
+    width: 100%;
+  }
+
   .nav-li-desktop a:link,
   .nav-li-desktop a:visited {
     text-decoration: none;
     color: #3e3e3e;
-    width: 100%;
     text-align: center;
   }
 
   .nav-li-desktop:first-child {
     flex: 4;
+    justify-content: flex-start;
+  }
+
+  .nav-li-desktop:first-child > a {
+    width: fit-content;
   }
 
   .nav-li-desktop:nth-child(7) {
@@ -618,6 +723,10 @@ italic */
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .program-activity:hover {
+    border: solid 1px var(--light-grey);
   }
 
   .program-activity > * {
@@ -748,7 +857,7 @@ italic */
   .past-years-container {
     flex-direction: row;
     align-items: stretch;
-    max-width: 550px;
+    max-width: 850px;
   }
 
   .single-year-container::after {
