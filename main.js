@@ -1,3 +1,5 @@
+// ----------------------- Champions Data -----------------------
+
 const champs = [
   {
     champName: 'Keanu Reeves',
@@ -42,6 +44,8 @@ const champs = [
   },
 ];
 
+// ----------------------- Champ population -----------------------
+
 function addChamp(num) {
   const champCard = document.createElement('div');
   champCard.classList.add('champ-card');
@@ -62,6 +66,8 @@ function addChamp(num) {
 
 function populateChamps(start, end) {
   const champGrid = document.querySelector('.champ-grid');
+  if (!champGrid) return;
+
   champGrid.innerHTML = '';
   for (let i = start; i < end; i += 1) {
     champGrid.appendChild(addChamp(i));
@@ -74,20 +80,22 @@ if (window.innerWidth >= 768) {
 }
 
 const moreChamps = document.querySelector('.champions-more');
-moreChamps.addEventListener('click', () => {
-  moreChamps.classList.toggle('is-active');
-  populateChamps(0, 2);
-  if (moreChamps.classList.contains('is-active')) {
-    populateChamps(0, 6);
-  }
-});
+if (moreChamps) {
+  moreChamps.addEventListener('click', () => {
+    moreChamps.classList.toggle('is-active');
+    populateChamps(0, 2);
+    if (moreChamps.classList.contains('is-active')) {
+      populateChamps(0, 6);
+    }
+  });
 
-window.addEventListener('resize', () => {
-  populateChamps(0, 2);
-  if (window.innerWidth >= 768 || moreChamps.classList.contains('is-active')) {
-    populateChamps(0, 6);
-  }
-});
+  window.addEventListener('resize', () => {
+    populateChamps(0, 2);
+    if (window.innerWidth >= 768 || moreChamps.classList.contains('is-active')) {
+      populateChamps(0, 6);
+    }
+  });
+}
 // ----------------------- Nav Menu Mobile Controls -----------------------
 
 const navMenu = document.createElement('section');
@@ -100,11 +108,11 @@ navMenu.innerHTML = `<ul class="nav-menu-ul">
 <li class="nav-menu-li"><a href="#">Sponsor</a></li>
 <li class="nav-menu-li"><a href="#">News</a></li>
 </ul>`;
+const body = document.querySelector('body');
+body.appendChild(navMenu);
 
 const hamburgerMenu = document.querySelector('.hamburger');
 hamburgerMenu.addEventListener('click', () => {
-  const body = document.querySelector('body');
   hamburgerMenu.classList.toggle('is-active');
-  body.appendChild(navMenu);
   navMenu.classList.toggle('is-active');
 });

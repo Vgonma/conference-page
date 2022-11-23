@@ -29,7 +29,7 @@ body {
 
 /* ============================== Nav Menu ============================== */
 .nav-menu-mobile.is-active {
-  left: 0;
+  transform: translate(100%, 0);
 }
 
 .nav-menu-mobile {
@@ -38,9 +38,10 @@ body {
   left: -65%;
   height: 100vh;
   width: 65vw;
-  background-color: #d3d3d3df;
+  background-color: #d3d3d3ba;
   backdrop-filter: blur(3px);
   z-index: 20;
+  transition: 0.5s;
 }
 
 .nav-menu-ul {
@@ -100,8 +101,8 @@ body {
 
 .hamburger {
   display: block;
-  height: 35px;
-  width: 40px;
+  height: 20px;
+  width: 25px;
   cursor: pointer;
   background: none;
   outline: none;
@@ -115,10 +116,14 @@ body {
   content: '';
   display: block;
   background-color: #5d5d5d;
-  height: 7px;
+  height: 5px;
   width: 100%;
-  margin: 6px 0;
+  margin: 4px 0;
   transition: 0.2s;
+}
+
+.bar {
+  transition: 0s;
 }
 
 .hamburger.is-active .bar {
@@ -128,13 +133,13 @@ body {
 .hamburger.is-active::before {
   transform:
     rotate(45deg)
-    translate(10px, 7px);
+    translate(-5px, 10px);
 }
 
 .hamburger.is-active::after {
   transform:
     rotate(-45deg)
-    translate(11px, -9px);
+    translate(3px, -18px);
 }
 
 /* ------------------------------ title section ------------------------------ */
@@ -360,7 +365,6 @@ body {
   background-color: #f7f7f7;
   background-image: url(./images/bg-header-alt1.jpg);
   background-size: contain;
-  background-repeat: repeat-x;
   background-position: top;
 }
 
@@ -721,6 +725,10 @@ body {
     align-items: center;
   }
 
+  .program-activity:hover {
+    border: solid 1px var(--light-grey);
+  }
+
   .program-activity > * {
     display: flex;
     flex-direction: column;
@@ -849,7 +857,7 @@ body {
   .past-years-container {
     flex-direction: row;
     align-items: stretch;
-    max-width: 550px;
+    max-width: 850px;
   }
 
   .single-year-container::after {
