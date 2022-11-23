@@ -5,12 +5,6 @@
   font-family: Lato Regular, sans-serif;
 }
 
-/* lato font stiles
-regular
-bold
-bold italic
-italic */
-
 :root {
   --grey: #272a31;
   --orange: #ec5242;
@@ -30,9 +24,11 @@ body {
 /* ============================== Nav Menu ============================== */
 .nav-menu-mobile.is-active {
   transform: translate(100%, 0);
+  opacity: 1;
 }
 
 .nav-menu-mobile {
+  opacity: 0;
   position: fixed;
   top: 0;
   left: -65%;
@@ -84,7 +80,6 @@ body {
   background-image: url(./images/bg-header.jpg);
   background-size: contain;
   background-position: center top;
-  background-repeat: no-repeat;
 }
 
 /* ------------------------------ nav section ------------------------------ */
@@ -519,7 +514,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #414246;
+  background-color: #2e2e2e;
   color: white;
   padding: 0.8em;
 }
@@ -674,7 +669,7 @@ body {
     flex: 2;
   }
 
-  .nav-li-desktop:nth-child(2) a {
+  .nav-li-desktop.nav-selected a {
     color: var(--orange);
   }
 
@@ -689,6 +684,11 @@ body {
     border: solid 3px var(--orange);
     padding: 0.6em;
     color: var(--orange);
+    cursor: pointer;
+  }
+
+  .nav-button-desktop:active {
+    background-color: #fd5f2b;
   }
 
   /* ------------------------------ Title section desktop------------------------------ */
@@ -707,8 +707,8 @@ body {
   }
 
   .head-title-big {
-    font-size: 46px;
-    line-height: 53px;
+    font-size: 60px;
+    line-height: 58px;
   }
 
   /* ------------------------------ program section desktop------------------------------ */
@@ -716,13 +716,14 @@ body {
   .main-program ul {
     display: flex;
     gap: 0 5px;
-    margin: 0 20%;
+    max-width: 1200px;
   }
 
   .program-activity {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: transparent 1px solid;
   }
 
   .program-activity:hover {
@@ -734,6 +735,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    margin: 4px 0;
   }
 
   .program-activity > p {
