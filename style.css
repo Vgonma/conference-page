@@ -28,7 +28,7 @@ body {
 }
 
 /* ============================== Nav Menu ============================== */
-.is-active {
+.nav-menu-mobile.is-active {
   left: 0;
 }
 
@@ -38,7 +38,7 @@ body {
   left: -65%;
   height: 100vh;
   width: 65vw;
-  background-color: #d3d3d3ef;
+  background-color: #d3d3d3df;
   backdrop-filter: blur(3px);
   z-index: 20;
 }
@@ -107,7 +107,6 @@ body {
   outline: none;
   border: none;
   appearance: none;
-  transition: 0.5ms;
 }
 
 .bar,
@@ -119,6 +118,7 @@ body {
   height: 7px;
   width: 100%;
   margin: 6px 0;
+  transition: 0.2s;
 }
 
 .hamburger.is-active .bar {
@@ -244,6 +244,10 @@ body {
   margin: 2.3em 4em;
 }
 
+.program-join-btn:active {
+  background-color: #ba2e1c;
+}
+
 .program-full-link {
   display: none;
 }
@@ -336,10 +340,23 @@ body {
   font-weight: normal;
 }
 
+.up-arrow {
+  object-fit: contain;
+  width: 15px;
+  margin: 0 10px;
+  transform: rotate(180deg);
+}
+
+.champions-more.is-active .up-arrow {
+  transform: rotate(0deg);
+}
+
 /* ============================== About page ============================== */
 
 /* ------------------------------ About main section ------------------------------ */
 .about-title-section {
+  display: flex;
+  flex-direction: column;
   background-color: #f7f7f7;
   background-image: url(./images/bg-header-alt1.jpg);
   background-size: contain;
@@ -616,6 +633,7 @@ body {
     height: 3em;
     width: 100%;
     padding: 0 10%;
+    box-shadow: 0 2px 5px #2e2e2e;
   }
 
   .nav-li-desktop {
