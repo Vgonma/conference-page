@@ -27,7 +27,7 @@
 
 # 📖 [Conference page] <a name="about-project"></a>
 
-This is a basic mockup for a conference web page.
+This is a basic mockup for a conference web page. The task is to replicate the template given with custom data.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -71,8 +71,8 @@ Built with html, css and JavaScript..
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
-
+- [Live Demo Link](https://vgonma.github.io/conference-page/index.html)
+- [Project presentation](https://www.loom.com/share/a266e8a0435846fa8fce5a3f7be68a2f)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
