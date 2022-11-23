@@ -83,12 +83,8 @@ const moreChamps = document.querySelector('.champions-more');
 if (moreChamps) {
   moreChamps.addEventListener('click', () => {
     moreChamps.classList.toggle('is-active');
-    moreChamps.innerHTML = `MORE
-      <img class="up-arrow" src="./images/up-arrow.png" alt="Show more champs">`;
     populateChamps(0, 2);
     if (moreChamps.classList.contains('is-active')) {
-      moreChamps.innerHTML = `HIDE
-      <img class="up-arrow" src="./images/up-arrow.png" alt="Show more champs">`;
       populateChamps(0, 6);
     }
   });
