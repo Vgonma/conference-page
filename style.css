@@ -203,7 +203,7 @@ body {
   margin-bottom: 20px;
 }
 
-.main-program ul {
+.program-list {
   list-style: none;
   gap: 15px 0;
 }
@@ -217,17 +217,17 @@ body {
   background-color: #d3d3d320;
 }
 
-.main-program ul h4 {
+.program-list h4 {
   color: var(--orange);
   flex: 1;
 }
 
-.main-program ul img {
+.program-list img {
   width: 40px;
   height: 40px;
 }
 
-.main-program ul p {
+.program-list p {
   flex: 2.5;
 }
 
@@ -713,7 +713,7 @@ body {
 
   /* ------------------------------ program section desktop------------------------------ */
 
-  .main-program ul {
+  .program-list {
     display: flex;
     gap: 0 5px;
     max-width: 1200px;

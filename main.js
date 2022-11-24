@@ -47,7 +47,7 @@ const champs = [
 // ----------------------- Champ population -----------------------
 
 function addChamp(num) {
-  const champCard = document.createElement('div');
+  const champCard = document.createElement('article');
   champCard.classList.add('champ-card');
   champCard.innerHTML = `
   <div class="champ-left">
